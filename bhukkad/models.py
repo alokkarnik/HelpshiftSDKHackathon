@@ -8,7 +8,7 @@ from django.utils.encoding import python_2_unicode_compatible
 @python_2_unicode_compatible
 class User(models.Model):
     user_name = models.CharField(max_length=200)
-    is_active = models.BooleanField(True)
+    is_active = models.BooleanField(default=True)
 
     def __str__(self):
         return '%s %d' % (self.user_name, self.is_active)
@@ -17,7 +17,7 @@ class User(models.Model):
 @python_2_unicode_compatible
 class Food(models.Model):
     food_name = models.CharField(max_length=200)
-    is_served = models.BooleanField(True)
+    is_served = models.BooleanField(default=True)
 
     def __str__(self):
         return '%s %d' % (self.food_name, self.is_served)
