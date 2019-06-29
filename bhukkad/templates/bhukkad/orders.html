@@ -1,0 +1,9 @@
+{% if active_order_list %}
+    <ul>
+    {% for order in active_order_list %}
+        <li>{{order.food.food_name}}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No order are available.</p>
+{% endif %}
